@@ -1,0 +1,19 @@
+{
+  "params":
+  {
+    "local_server" : "True",
+    "local_uri" : "mysql://root:@localhost/blog",
+    "prod_uri" : "mysql://root:@localhost/blog",
+    "fb_uri" : "https://www.facebook.com",
+    "twitter_uri" : "https://www.twitter.com",
+    "github_uri" : "https://www.github.com",
+    "gmail-user" : "{{mail-id}}",
+    "gmail-pass" : "{{password}}",
+    "about-text" : "Hii I am Abhishek. I am currently pursuing T.Y.B.Tech. in computer science at V.J.T.I. Matunga. I just love programming.",
+    "sample_post" : "corona",
+    "number_posts": 3,
+    "admin_name" : "abhi@gmail.com",
+    "admin_password" : "12345678",
+    "uploader_location" : "C:\\Users\\abhis\\PycharmProjects\\flask_tuts\\venv\\static\\img"
+  }
+}
