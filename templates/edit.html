@@ -1,0 +1,93 @@
+
+{% extends "layout.html"  %}
+
+
+{% block body %}
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{url_for('static',filename = 'img/home-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Clean Blog</h1>
+            <span class="subheading">A Blog Theme by Abhishek</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="container">
+ <h2>Edit/Add Posts here</h2>
+
+
+
+
+
+<form name="sentMessage" id="contactForm" novalidate action="/edit/{{srno}}" method="post">
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Title</label>
+              <input value="{{post.title}}" name="title" type="text" class="form-control" placeholder="title" id="title" required data-validation-required-message="Please enter title of blog.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+         <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Tagline</label>
+              <input value="{{post.tagline}}" name="tagline" type="text" class="form-control" placeholder="tagline" id="tagline" required data-validation-required-message="Please enter tagline of blog.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Content</label>
+              <input value="{{post.content}}"   name="content"  type="text-danger" class="form-control" placeholder="content" id="content" required data-validation-required-message="Please enter content of blog.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Slug</label>
+              <input value="{{post.slugs}}" name="slug" type="text" class="form-control" placeholder="slug" id="slug" required data-validation-required-message="Please enter slug of blog.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Image file</label>
+              <input value="{{post.img_file}}" name="img_file" type="text" class="form-control" placeholder="img_file" id="img_file" required data-validation-required-message="Please enter img_file of blog.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+
+          <br>
+          <div id="success"></div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+          </div>
+        </form>
+
+
+
+ 
+
+      
+        
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  {% endblock   %}
+
+  <!-- Footer -->
